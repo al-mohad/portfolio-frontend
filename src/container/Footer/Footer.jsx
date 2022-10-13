@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
-import { images } from "../../constants";
-import { AppWrap, MotionWrap } from "../../wrapper";
-import { client } from "../../client";
+import {client} from "../../client";
+import {images} from "../../constants";
+import {AppWrap, MotionWrap} from "../../wrapper";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -14,11 +14,11 @@ const Footer = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { username, email, message } = formData;
+  const {username, email, message} = formData;
 
   const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const {name, value} = e.target;
+    setFormData({...formData, [name]: value});
   };
 
   const handleSubmit = () => {
@@ -42,19 +42,19 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Take a coffee & chat with me</h2>
+      <h2 className="head-text">Take a coffee & connect with us</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:gmbdairy@gmail.com" className="p-text">
-            gmbdairy@gmail.com
+          <a href="mailto:info@intelpeaktech.com" className="p-text">
+            Send us an email
           </a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
           <a href="tel:+234 (807) 860-0665" className="p-text">
-            +234 (807) 860-0665
+            Call us
           </a>
         </div>
       </div>
