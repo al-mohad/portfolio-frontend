@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationDots, SocialMedia } from '../components';
+import {NavigationDots, SocialMedia} from '../components';
 
 const AppWrap = (Component, idName, classNames) => function HOC() {
   return (
@@ -9,7 +9,8 @@ const AppWrap = (Component, idName, classNames) => function HOC() {
         <Component />
 
         <div className="copyright">
-          <p className="p-text">@{(new Date().getFullYear())} Almohad</p>
+          <p className="p-text">IntelPeak Technologies</p>
+          <p className="p-text">@2018-{(new Date().getFullYear())}</p>
           <p className="p-text">All rights reserved</p>
         </div>
       </div>
